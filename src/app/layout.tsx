@@ -1,5 +1,19 @@
 import type { Metadata } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
+
+const poppins = Poppins({
+	variable: '--font-poppins',
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+});
+
+const lora = Lora({
+	variable: '--font-lora',
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -12,8 +26,18 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='fr'>
-			<body className={`antialiased`}>{children}</body>
+		<html
+			lang='fr'
+			suppressHydrationWarning>
+			<body className={`${poppins.variable} ${lora.variable} antialiased`}>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange>
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
