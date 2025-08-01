@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/layouts/footer';
+import Sidebar from '@/components/sidebar';
 
 const poppins = Poppins({
 	variable: '--font-poppins',
@@ -35,7 +37,13 @@ export default function RootLayout({
 					defaultTheme='system'
 					enableSystem
 					disableTransitionOnChange>
-					{children}
+					<div className='flex min-h-screen'>
+						<Sidebar />
+						<div className='flex-1 flex flex-col justify-between'>
+							{children}
+							<Footer />
+						</div>
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>
