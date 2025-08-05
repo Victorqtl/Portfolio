@@ -139,10 +139,6 @@
 		@apply bg-background text-primary;
 	}
 
-	.dark body {
-		background-image: url('../assets/noise.svg');
-		background-blend-mode: multiply;
-	}
 	p,
 	a,
 	button {

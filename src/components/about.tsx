@@ -2,7 +2,7 @@ import Me from '@/assets/me.png';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
-import { Mail, Linkedin, Github, Ghost } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 import Link from 'next/link';
 
