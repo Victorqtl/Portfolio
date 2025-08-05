@@ -30,6 +30,7 @@
 	--color-muted-foreground: var(--muted-foreground);
 	--color-muted: var(--muted);
 	--color-secondary-foreground: var(--secondary-foreground);
+	--color-foreground-secondary: var(--foreground-secondary);
 	--color-secondary: var(--secondary);
 	--color-primary-foreground: var(--primary-foreground);
 	--color-primary: var(--primary);
@@ -46,12 +47,13 @@
 :root {
 	--radius: 0.625rem;
 	--background: oklch(100% 0 0);
-	--foreground: oklch(14.5% 0 0);
+	--foreground: #1a1a1a;
+	--foreground-secondary: #a0a0a0;
 	--card: oklch(100% 0 0);
 	--card-foreground: oklch(14.5% 0 0);
 	--popover: oklch(100% 0 0);
 	--popover-foreground: oklch(14.5% 0 0);
-	--primary: oklch(20.5% 0 0);
+	--primary: #1a1a1a;
 	--primary-foreground: oklch(98.5% 0 0);
 	--secondary: oklch(97% 0 0);
 	--secondary-foreground: oklch(20.5% 0 0);
@@ -87,8 +89,9 @@
 }
 
 .dark {
-	--background: #0a0a0a;
-	--foreground: oklch(98.5% 0 0);
+	--background: #1a1a1a;
+	--foreground: #f2f2f2;
+	--foreground-secondary: ##a0a0a0;
 	--card: oklch(20.5% 0 0);
 	--card-foreground: oklch(98.5% 0 0);
 	--popover: oklch(26.9% 0 0);
@@ -135,9 +138,17 @@
 	body {
 		@apply bg-background text-primary;
 	}
-	p {
+
+	.dark body {
+		background-image: url('../assets/noise.svg');
+		background-blend-mode: multiply;
+	}
+	p,
+	a,
+	button {
 		font-family: var(--font-poppins);
-		font-size: 0.875rem;
+		font-size: 1rem;
+		font-weight: 400;
 	}
 	h1,
 	h2,
@@ -146,5 +157,14 @@
 	h5,
 	h6 {
 		@apply font-lora;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+	@media (min-width: 800px) {
+		h2 {
+			font-size: 1.75rem;
+		}
 	}
 }
