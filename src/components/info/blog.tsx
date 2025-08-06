@@ -35,16 +35,16 @@ export default function Blog() {
 						className='flex items-center justify-between'>
 						<Link
 							href={project.href}
-							className='w-full flex items-center justify-between py-2 hover:bg-muted-foreground/5 transition-colors duration-200'>
-							<p className='font-medium'>{project.title}</p>
-							<p className='text-muted-foreground'>{project.category}</p>
+							className='w-full flex items-center justify-between py-2 hover:bg-muted-foreground/5 transition-colors duration-300 group'>
+							<p className='font-medium group-hover:text-primary'>{project.title}</p>
+							<p className='text-foreground/60 group-hover:text-muted-foreground'>{project.category}</p>
 						</Link>
 					</li>
 				))}
 			</ul>
 			<Link
 				href='/blog'
-				className='w-fit underline underline-offset-[2.5px] decoration-[#505050] hover:decoration-primary transition-colors duration-200 text-muted-foreground hover:text-primary text-sm'>
+				className='w-fit underline underline-offset-[2.5px] decoration-[#505050] hover:decoration-primary transition-colors duration-300 text-muted-foreground hover:text-primary text-sm'>
 				Tous les articles
 			</Link>
 		</div>

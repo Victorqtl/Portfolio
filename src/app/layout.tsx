@@ -15,8 +15,62 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-	title: 'Victor Quertelet - Développeur Full Stack',
-	description: 'Développeur Full Stack',
+	title: 'Victor Quertelet',
+	description:
+		'Développeur Full Stack. Je conçois des applications web fiables et durables, pensées pour grandir avec vos projets.',
+	keywords: [
+		'développeur full stack',
+		'développement web',
+		'JavaScript',
+		'TypeScript',
+		'React',
+		'Next.js',
+		'application web',
+		'développeur freelance',
+	],
+	authors: [{ name: 'Victor Quertelet' }],
+	creator: 'Victor Quertelet',
+	publisher: 'Victor Quertelet',
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
+	openGraph: {
+		type: 'website',
+		locale: 'fr_FR',
+		url: 'https://victorquertelet.dev',
+		siteName: 'Victor Quertelet',
+		title: 'Victor Quertelet',
+		description:
+			'Développeur Full Stack. Je conçois des applications web fiables et durables, pensées pour grandir avec vos projets.',
+		images: [
+			{
+				url: '/logo.png',
+				width: 1200,
+				height: 630,
+				alt: 'Victor Quertelet',
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Victor Quertelet',
+		description:
+			'Développeur Full Stack. Je conçois des applications web fiables et durables, pensées pour grandir avec vos projets.',
+		images: ['/logo.png'],
+	},
+	icons: {
+		icon: '/logo.png',
+		shortcut: '/logo.png',
+		apple: '/logo.png',
+	},
 };
 
 export default function RootLayout({
@@ -25,12 +79,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
-			lang='fr'
-			suppressHydrationWarning>
-			<body className={`${poppins.variable} ${lora.variable} antialiased`}>
-				<main className='max-w-[1440px] mx-auto h-full w-full'>{children}</main>
-			</body>
+		<html lang='fr'>
+			<body className={`${poppins.variable} ${lora.variable} antialiased`}>{children}</body>
 		</html>
 	);
 }

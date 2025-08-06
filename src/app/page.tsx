@@ -3,11 +3,13 @@ import Info from '@/components/info/info';
 
 export default function page() {
 	return (
-		<div className='flex flex-col lg:flex-row min-h-screen'>
-			<About />
-			<div className='flex-1 overflow-y-auto'>
-				<Info />
+		<main className='max-w-[1440px] mx-auto h-full w-full'>
+			<div className='flex flex-col lg:flex-row min-h-screen'>
+				<About />
+				<div className='flex-1 overflow-y-auto'>
+					<Info />
+				</div>
 			</div>
-		</div>
+		</main>
 	);
 }

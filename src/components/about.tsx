@@ -1,7 +1,5 @@
 'use client';
 
-import Me from '@/assets/me.png';
-import Image from 'next/image';
 import { Button } from './ui/button';
 import { getCalApi } from '@calcom/embed-react';
 import { useEffect } from 'react';
@@ -45,13 +43,6 @@ export default function About() {
 		<section className='shrink-0 px-6 py-12 lg:p-16 max-w-xl flex flex-col lg:justify-between lg:h-screen lg:sticky lg:top-0'>
 			<div className='flex flex-col gap-6'>
 				<div className='flex items-center gap-4'>
-					<Image
-						src={Me}
-						alt='Victor Quertelet'
-						className='w-20 h-20 rounded-full'
-						width={500}
-						height={500}
-					/>
 					<div className='flex flex-col gap-1'>
 						<h1 className='text-4xl'>Victor Quertelet</h1>
 						<p className='text-lg font-medium'>Développeur Full Stack</p>
