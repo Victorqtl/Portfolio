@@ -41,7 +41,7 @@ export default function Projects() {
 						className='flex flex-col gap-1'>
 						<Link
 							href={project.href}
-							className='w-fit flex gap-1 font-medium underline underline-offset-[2.5px] dark:decoration-[#505050] decoration-muted-foreground hover:decoration-primary transition-colors duration-200'>
+							className='w-fit flex gap-1 font-medium underline underline-offset-[2.5px] decoration-[#505050] hover:decoration-primary transition-colors duration-300'>
 							<span>{project.title}</span>
 							<ArrowUpRight
 								size={20}

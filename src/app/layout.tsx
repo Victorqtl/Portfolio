@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { ThemeProvider } from '@/components/theme-provider';
 import { Poppins, Lora } from 'next/font/google';
 import './globals.css';
 
@@ -30,13 +29,7 @@ export default function RootLayout({
 			lang='fr'
 			suppressHydrationWarning>
 			<body className={`${poppins.variable} ${lora.variable} antialiased`}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-					disableTransitionOnChange>
-					<main className='max-w-[1440px] mx-auto h-screen w-full'>{children}</main>
-				</ThemeProvider>
+				<main className='max-w-[1440px] mx-auto h-full w-full'>{children}</main>
 			</body>
 		</html>
 	);

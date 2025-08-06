@@ -55,9 +55,9 @@ export default function Stack() {
 				{stackData.map((item, index) => (
 					<li
 						key={index}
-						className='flex xl:items-center gap-4'>
-						<div className='items-start flex gap-2'>
-							<p className='text-[#707070]'>•</p>
+						className='flex flex-col gap-1'>
+						<div className='flex items-center gap-2'>
+							<p className=' text-[#707070]'>•</p>
 							<p className='font-medium'>{item.title}</p>
 						</div>
 						<p className='text-muted-foreground'>{item.description}</p>
