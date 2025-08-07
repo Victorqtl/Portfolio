@@ -32,19 +32,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'fr_FR',
-		url: 'https://victorquertelet.dev/blog',
-		siteName: 'Victor Quertelet - Blog',
+		url: 'https://victorquertelet.com/blog',
+		siteName: 'Victor Quertelet',
 		title: 'Blog - Victor Quertelet',
 		description:
 			'Articles et réflexions sur le développement web, les technologies modernes et les bonnes pratiques. Découvrez mes expériences et conseils en tant que développeur full stack.',
-		images: [
-			{
-				url: '/logo.png',
-				width: 1200,
-				height: 630,
-				alt: 'Blog Victor Quertelet',
-			},
-		],
 	},
 	twitter: {
 		card: 'summary_large_image',
@@ -54,7 +46,7 @@ export const metadata: Metadata = {
 		images: ['/logo.png'],
 	},
 	alternates: {
-		canonical: 'https://victorquertelet.dev/blog',
+		canonical: 'https://victorquertelet.com/blog',
 		types: {
 			'application/rss+xml': [{ title: 'Blog RSS Feed', url: '/blog/rss.xml' }],
 		},

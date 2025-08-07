@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 		'application web',
 		'développeur freelance',
 	],
-	authors: [{ name: 'Victor Quertelet' }],
 	creator: 'Victor Quertelet',
 	publisher: 'Victor Quertelet',
 	robots: {
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'fr_FR',
-		url: 'https://victorquertelet.dev',
+		url: 'https://victorquertelet.com',
 		siteName: 'Victor Quertelet',
 		title: 'Victor Quertelet',
 		description:
