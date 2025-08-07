@@ -19,8 +19,8 @@ export default function Experience() {
 			{experienceData.map((item, index) => (
 				<div
 					key={index}
-					className='flex gap-4 xl:gap-0'>
-					<p className='flex-2/5 text-muted-foreground'>{item.period}</p>
+					className='flex gap-6 xl:gap-0'>
+					<p className='flex-2/5 text-muted-foreground text-sm'>{item.period}</p>
 					<div className='flex flex-col gap-1'>
 						<p>{item.title}</p>
 						<p className='text-muted-foreground'>{item.description}</p>

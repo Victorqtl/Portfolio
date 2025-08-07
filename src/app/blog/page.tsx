@@ -40,7 +40,7 @@ export default function page() {
 				<h1 className='text-[1.5rem] lg:text-[1.75rem]'>Blog</h1>
 				<div className='flex border-t border-t-[#2e2e2e] border-b border-b-[#2e2e2e]'>
 					<p className='pt-4 text-sm text-muted-foreground'>2025</p>
-					<ul className='flex flex-col group ml-[25%]'>
+					<ul className='flex flex-col group ml-[10%] lg:ml-[25%]'>
 						{blogData.map((article, index) => (
 							<li
 								key={index}

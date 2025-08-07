@@ -6,7 +6,7 @@ import Contact from './contact';
 
 export default function Info() {
 	return (
-		<div className='p-6 lg:p-16 flex flex-col gap-10'>
+		<div className='flex flex-col gap-10'>
 			<Experience />
 			<Projects />
 			<Stack />

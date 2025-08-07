@@ -3,12 +3,10 @@ import Info from '@/components/info/info';
 
 export default function page() {
 	return (
-		<main className='max-w-[1440px] mx-auto h-full w-full'>
-			<div className='flex flex-col lg:flex-row min-h-screen'>
+		<main className='max-w-2xl mx-auto h-full w-full'>
+			<div className='flex flex-col gap-16 px-6 lg:px-0 py-12 lg:py-16'>
 				<About />
-				<div className='flex-1 overflow-y-auto'>
-					<Info />
-				</div>
+				<Info />
 			</div>
 		</main>
 	);

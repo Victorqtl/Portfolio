@@ -40,7 +40,7 @@ export default function About() {
 		})();
 	}, []);
 	return (
-		<section className='shrink-0 px-6 py-12 lg:p-16 max-w-xl flex flex-col lg:justify-between lg:h-screen lg:sticky lg:top-0'>
+		<section className='flex flex-col'>
 			<div className='flex flex-col gap-6'>
 				<div className='flex items-center gap-4'>
 					<div className='flex flex-col gap-1'>
@@ -54,31 +54,24 @@ export default function About() {
 						Chaque détail compte pour offrir une expérience fluide et unique.
 					</p>
 				</div>
-				<div className='flex justify-end items-center gap-5 lg:hidden'>
-					{socials.map(social => (
-						<Link
-							key={social.link}
-							href={social.link}>
-							{social.icon}
-						</Link>
-					))}
+				<div className='flex justify-between items-center'>
+					<div className='flex items-center gap-5'>
+						{socials.map(social => (
+							<Link
+								key={social.link}
+								href={social.link}>
+								{social.icon}
+							</Link>
+						))}
+					</div>
+					<Button
+						data-cal-namespace='appel-decouverte'
+						data-cal-link='victor-quertelet/appel-decouverte'
+						data-cal-config='{"layout":"month_view"}'
+						className='w-fit'>
+						Réserver un appel
+					</Button>
 				</div>
-				<Button
-					data-cal-namespace='appel-decouverte'
-					data-cal-link='victor-quertelet/appel-decouverte'
-					data-cal-config='{"layout":"month_view"}'
-					size='lg'>
-					Réserver un appel
-				</Button>
-			</div>
-			<div className='hidden lg:flex items-center gap-5'>
-				{socials.map(social => (
-					<Link
-						key={social.link}
-						href={social.link}>
-						{social.icon}
-					</Link>
-				))}
 			</div>
 		</section>
 	);

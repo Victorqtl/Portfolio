@@ -3,24 +3,24 @@ import Link from 'next/link';
 interface BlogItem {
 	href: string;
 	title: string;
-	category: string;
+	date: string;
 }
 
-const projectsData: BlogItem[] = [
+const blogData: BlogItem[] = [
 	{
-		href: '/blog/',
-		title: "Zustand, le gestionnaire d'état parfait ?",
-		category: 'Outils',
+		href: '/blog/formulaire-nextjs-validation-cote-client-et-serveur',
+		title: 'Formulaire Next.js : validation côté client et serveur',
+		date: '07/08',
 	},
 	{
-		href: '/blog/',
-		title: 'Next.js, Comment intégrer efficacement une API',
-		category: 'Framework',
+		href: '/blog/utiliser-react-suspense-pour-ameliorer-le-chargement',
+		title: 'Utiliser React <Suspense> pour améliorer le chargement',
+		date: '05/08',
 	},
 	{
-		href: '/blog/',
-		title: 'Les designs les plus inspirants sur Figma',
-		category: 'Design',
+		href: '/blog/activer-le-dark-mode-dans-nextjs',
+		title: 'Activer le dark mode dans Next.js',
+		date: '01/08',
 	},
 ];
 
@@ -28,16 +28,16 @@ export default function Blog() {
 	return (
 		<div className='flex flex-col gap-4'>
 			<h2>Blog</h2>
-			<ul className='flex flex-col'>
-				{projectsData.map((project, index) => (
+			<ul className='flex flex-col group'>
+				{blogData.map((project, index) => (
 					<li
 						key={index}
 						className='flex items-center justify-between'>
 						<Link
 							href={project.href}
-							className='w-full flex items-center justify-between py-2 hover:bg-muted-foreground/5 transition-colors duration-300 group'>
+							className='w-full flex gap-6 lg:items-center justify-between py-2 transition-opacity duration-300 group-hover:opacity-50 hover:opacity-100'>
 							<p className='group-hover:text-primary'>{project.title}</p>
-							<p className='text-foreground/60 group-hover:text-muted-foreground'>{project.category}</p>
+							<p className='text-muted-foreground text-sm'>{project.date}</p>
 						</Link>
 					</li>
 				))}
