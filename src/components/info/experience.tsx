@@ -22,7 +22,7 @@ export default function Experience() {
 					className='flex gap-4 xl:gap-0'>
 					<p className='flex-2/5 text-muted-foreground'>{item.period}</p>
 					<div className='flex flex-col gap-1'>
-						<p className='font-medium'>{item.title}</p>
+						<p>{item.title}</p>
 						<p className='text-muted-foreground'>{item.description}</p>
 					</div>
 				</div>

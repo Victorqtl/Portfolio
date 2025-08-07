@@ -28,7 +28,7 @@ const stackData: StackItem[] = [
 	{
 		href: '/',
 		title: 'Prisma',
-		description: 'ORM simple, rapide et facile à utiliser',
+		description: 'ORM simple, rapide et facile à utiliser.',
 	},
 	{
 		href: '/',
@@ -38,7 +38,7 @@ const stackData: StackItem[] = [
 	{
 		href: '/',
 		title: 'Vercel',
-		description: 'La solution évidente pour déployer mes projets',
+		description: 'La solution évidente pour déployer mes projets.',
 	},
 	{
 		href: '/',
@@ -58,7 +58,7 @@ export default function Stack() {
 						className='flex flex-col gap-1'>
 						<div className='flex items-center gap-2'>
 							<p className=' text-[#707070]'>•</p>
-							<p className='font-medium'>{item.title}</p>
+							<p>{item.title}</p>
 						</div>
 						<p className='text-muted-foreground'>{item.description}</p>
 					</li>

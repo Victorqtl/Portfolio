@@ -36,7 +36,7 @@ export default function Blog() {
 						<Link
 							href={project.href}
 							className='w-full flex items-center justify-between py-2 hover:bg-muted-foreground/5 transition-colors duration-300 group'>
-							<p className='font-medium group-hover:text-primary'>{project.title}</p>
+							<p className='group-hover:text-primary'>{project.title}</p>
 							<p className='text-foreground/60 group-hover:text-muted-foreground'>{project.category}</p>
 						</Link>
 					</li>
@@ -45,7 +45,7 @@ export default function Blog() {
 			<Link
 				href='/blog'
 				className='w-fit underline underline-offset-[2.5px] decoration-[#505050] hover:decoration-primary transition-colors duration-300 text-muted-foreground hover:text-primary text-sm'>
-				Tous les articles
+				Voir tout
 			</Link>
 		</div>
 	);
